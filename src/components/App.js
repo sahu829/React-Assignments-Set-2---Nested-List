@@ -1,6 +1,5 @@
 import React, { Component, useState } from "react";
 import "./../styles/App.css";
-import Print from "./Print";
 import State from "./State";
 
 // Do not alter the states const and values inside it.
@@ -159,7 +158,6 @@ const states = [
 function App() {
   return (
     <div id="main">
-      <Print />
       <State states={states} />
     </div>
   );
