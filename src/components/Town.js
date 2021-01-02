@@ -7,7 +7,7 @@ export default function Town({ town }) {
   return (
     <>
       {town.towns.map((item, index) => (
-        <div key={index} id={`city${index}`} onClick={handleTown}>
+        <div key={index} id={`city${index + 1}`} onClick={handleTown}>
           {item.name}
         </div>
       ))}

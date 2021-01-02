@@ -6,7 +6,7 @@ export default function State({ states }) {
 
   const handleCity = (event) => {
     let index = event.target.id;
-    index = index.charAt(index.length - 1);
+    index = index.charAt(index.length - 1) - 1;
 
     console.log(index);
 
@@ -16,7 +16,7 @@ export default function State({ states }) {
   return (
     <>
       {states.map((item, index) => (
-        <div key={index} id={`state${index}`} onClick={handleCity}>
+        <div key={index} id={`state${index + 1}`} onClick={handleCity}>
           {item.name}
         </div>
       ))}

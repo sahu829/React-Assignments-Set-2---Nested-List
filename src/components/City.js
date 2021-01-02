@@ -6,14 +6,14 @@ export default function City({ city }) {
 
   const handleTown = (event) => {
     let index = event.target.id;
-    index = index.charAt(index.length - 1);
+    index = index.charAt(index.length - 1) - 1;
 
     setTownIndex(index);
   };
   return (
     <>
       {city.cities.map((item, index) => (
-        <div key={index} id={`city${index}`} onClick={handleTown}>
+        <div key={index} id={`city${index + 1}`} onClick={handleTown}>
           {item.name}
         </div>
       ))}
