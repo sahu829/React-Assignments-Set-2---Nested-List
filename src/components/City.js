@@ -8,6 +8,10 @@ export default function City({ city }) {
     let index = event.target.id;
     index = index.charAt(index.length - 1) - 1;
 
+    if (townIndex === index) {
+      setTownIndex(-1);
+      return;
+    }
     setTownIndex(index);
   };
   return (

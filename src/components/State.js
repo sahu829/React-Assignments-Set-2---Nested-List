@@ -8,6 +8,10 @@ export default function State({ states }) {
     let index = event.target.id;
     index = index.charAt(index.length - 1) - 1;
 
+    if (cityIndex === index) {
+      setCityIndex(-1);
+      return;
+    }
     console.log(index);
 
     setCityIndex(index);
